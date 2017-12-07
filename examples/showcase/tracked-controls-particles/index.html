@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Particle System Component Example</title>
+    <meta name="description" content="Hello, World!">
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <script src="components/aabb-collider.js"></script>
+    <script src="components/grab.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@4.0.1/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script> 
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- Hands -->
+      <a-entity hand-controls="left" aabb-collider="objects: .cube;" grab></a-entity>
+      <a-entity hand-controls="right" aabb-collider="objects: .cube;" grab></a-entity>
+
+      <!-- Particle system uses 'default' preset, setting custom colors. -->
+      <a-entity
+        position="0 2.25 -15" positionSpread = "20 2 0"
+        particle-system="color: #FF8800,#FF0000; preset: dust; particleCount: 10000"
+      ></a-entity>
+
+      <a-plane src="stone.jpg" rotation="-90 0 0" width="4" height="4"></a-plane>
+      <a-sky src="lake_medium.jpg" rotation="0 -130 0" color="#444444"></a-sky>
+    </a-scene>
+  </body>
+</html>

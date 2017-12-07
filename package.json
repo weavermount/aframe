@@ -31,6 +31,7 @@
   "license": "MIT",
   "dependencies": {
     "@tweenjs/tween.js": "^16.8.0",
+    "aframe-particle-system-component": "^1.0.11",
     "browserify-css": "^0.8.2",
     "debug": "ngokevin/debug#noTimestamp",
     "deep-assign": "^2.0.0",
